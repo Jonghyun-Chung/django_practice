@@ -1,0 +1,6 @@
+django
+codeclimate-test-reporter
+pytest
+pytest-cov
+pytest-mock
+pytest-asyncio
