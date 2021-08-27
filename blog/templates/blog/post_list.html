@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href={% static "blog/bootstrap/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "blog/_vendor/font-awesome/css/font-awesome.min.css" %}>
+    <link rel="stylesheet" href={% static "blog/_vendor/prismjs/themes/prism-okaidia.css"%}>
+    <link rel="stylesheet" href={% static "blog/_assets/css/custom.min.css" %}>
+    <title>Blog</title>
+</head>
+<body>
+<h1> Haha
+</h1>
+{% for p in object_list %}
+    <h3>{{ p.title }} </h3>
+    <h4>{{ p.created }} by by {{ p.author }}</h4>
+    <p>{{ p.content }}</p>
+{% endfor %}
+<script src={% static "blog/_vendor/jquery/dist/jquery.min.js" %}></script>
+<script src={% static "blog/bootstrap/dist/js/bootstrap.bundle.min.js" %}></script>
+<script src={% static "blog/_vendor/prismjs/prism.js"%} data-manual></script>
+<script src={% static "blog/_assets/js/custom.js" %}></script>
+</body>
+</html>

@@ -16,4 +16,4 @@ Including another URLconf
 from django.urls import path, include
 from . import views
 
-urlpatterns = [path("", views.index)]
+urlpatterns = [path("", views.PostList.as_view())]  # path("", views.index),
